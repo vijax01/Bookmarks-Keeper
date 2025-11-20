@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    --bs-navbar-padding-y: 0rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+}
+
+.navbar:hover {
+    box-shadow: 0 0 34px black;
+}
+
+.bg-nav {
+    background-color: #3C3C3C;
+}
+
+/* layout inside navbar */
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.search-form {
+    flex: 1 1 420px;
+    max-width: 420px;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(0,0,0,0.15);
+    color: #fff;
+}
+
+.navbar .ms-3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* avatar styling */
+.navbar img[alt="avatar"] {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+    .navbar { height: auto; padding: 0.5rem; }
+    .search-form { order: 2; width: 100%; max-width: none; margin-top: 0.5rem; }
+    .navbar .ms-3 { order: 1; }
+    .search-form input { font-size: 14px; }
+}
+
+@media (max-width: 420px) {
+    .navbar { padding: 0.4rem; }
+    .search-form { display: none; } /* hide search on very small screens */
+    .navbar .ms-3 { gap: 0.35rem; }
+    .navbar .btn { padding: 6px 8px; font-size: 14px; }
+}
+
+/* Bootstrap-friendly navbar tweaks */
+.navbar {
+  padding: 0.25rem 0.75rem;
+  min-height: 56px;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-size: 1.1rem;
+}
+
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.4);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* collapse menu spacing */
+#bmNav {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* search box responsiveness */
+#bmNav form {
+  max-width: 450px;
+}
+
+@media (max-width: 768px) {
+  #bmNav form { width: 100%; margin-bottom: 0.5rem; }
+  .ms-auto { margin-top: 0.5rem; }
+}
+
+
+
+
+/* Fix search width on small screens */
+@media (max-width: 576px) {
+  .search-form {
+    width: 100% !important;
+  }
+
+  #search-box {
+    width: 100% !important;
+  }
+
+  #search-results {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
